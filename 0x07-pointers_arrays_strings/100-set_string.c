@@ -1,22 +1,12 @@
 #include "main.h"
 
 /**
- * _memcpy - copy memory area
- * @dest: char array to copy into
- * @src: char array to copy from
- * @n: number of elements to copy
- * Return: pointer to `dest`
+ * set_string - sets the value of a pointer to a char
+ * @s: pointer to pointer
+ * @to: pointer char
  */
 
-char *_memcpy(char *dest, char *src, unsigned int n)
+void set_string(char **s, char *to)
 {
-	unsigned int count = 0;
-
-	while (count < n)
-	{
-		dest[count] = src[count];
-		count++;
-	}
-
-	return (dest);
+	*s = to;
 }
